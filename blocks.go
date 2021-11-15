@@ -113,6 +113,13 @@ func New(fs interface{}) *Blocks {
 // It forces the `ExecuteTemplate` to re-parse the templates on each incoming request.
 func (v *Blocks) Reload(b bool) *Blocks {
 	v.reload = b
+
+	if !v.reload {
+		if err := v.Load(); err != nil {
+			panic(err)
+		}
+	}
+
 	return v
 }
 
@@ -454,6 +461,10 @@ func (v *Blocks) ExecuteTemplate(w io.Writer, tmplName, layoutName string, data 
 		if err := v.Load(); err != nil {
 			return err
 		}
+	}
+
+	if layoutName == "" {
+		layoutName = v.defaultLayoutName
 	}
 
 	return v.executeTemplate(w, tmplName, layoutName, data)
