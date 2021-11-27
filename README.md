@@ -1,7 +1,5 @@
 # Blocks
 
-[![build status](https://img.shields.io/travis/com/kataras/blocks/master.svg?style=for-the-badge&logo=travis)](https://travis-ci.com/github/kataras/blocks) [![report card](https://img.shields.io/badge/report%20card-a%2B-ff3333.svg?style=for-the-badge)](https://goreportcard.com/report/github.com/kataras/blocks) [![godocs](https://img.shields.io/badge/go-%20docs-488AC7.svg?style=for-the-badge)](https://pkg.go.dev/github.com/kataras/blocks)
-
 Blocks is a, simple, Go-idiomatic view engine based on [html/template](https://pkg.go.dev/html/template?tab=doc#Template), plus the following features:
 
 - Compatible with the [http.FileSystem](https://golang.org/pkg/net/http/#FileSystem) interface
@@ -12,13 +10,19 @@ Blocks is a, simple, Go-idiomatic view engine based on [html/template](https://p
 - Markdown Content
 - Global [FuncMap](https://pkg.go.dev/html/template?tab=doc#FuncMap)
 
+## IMPORTANT: The original author is [@kataras](https://github.com/kataras), this repository is a modified version of [Blocks](https://github.com/kataras/blocks/) containing minor fixes and corrections. 
+
 ## Installation
 
 The only requirement is the [Go Programming Language](https://golang.org/dl).
 
+The original repository created by kataras can be installed using the following command.
+
 ```sh
 $ go get github.com/kataras/blocks
 ```
+
+**If you want to use this repository containing fixes to the original project you must download it and add it to your project directly.**
 
 ## Getting Started
 
